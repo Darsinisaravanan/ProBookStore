@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ProBookStore</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff; /* White background */
+            color: #1a237e; /* Dark blue text */
+        }
+
+        /* Header */
+        header {
+            background-color: #1a237e; /* Dark Blue */
+            color: white;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #64b5f6; /* lighter blue hover */
+        }
+
+        /* Banner */
+        .banner {
+            background-color: #64b5f6; /* light blue banner */
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner-box {
+            background: #ffffff; /* white box */
+            padding: 25px 50px;
+            border-radius: 10px;
+            border: 2px solid #1a237e;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            color: #1a237e;
+        }
+
+        /* About Section */
+        .about {
+            padding: 40px 60px;
+            text-align: center;
+            background-color: #e8eaf6; /* very light blue */
+        }
+
+        .about h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 16px;
+            max-width: 800px;
+            margin: 0 auto 10px auto;
+            line-height: 1.6;
+        }
+
+        /* Books Section */
+        .books {
+            padding: 50px 60px;
+            text-align: center;
+        }
+
+        .books h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .book-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .book {
+            background: #ffffff; /* white cards */
+            padding: 15px 15px 20px 15px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .book:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .book img {
+            height: 220px;         /* taller for better proportion */
+            width: 100%;           /* full card width */
+            object-fit: cover;     /* perfectly fit the frame */
+            border-radius: 8px;
+            display: block;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .book:hover img {
+            transform: scale(1.05); /* subtle zoom on hover */
+        }
+
+        .book p {
+            margin: 5px 0;
+            font-size: 16px;
+            text-align: center;    /* center titles and price */
+        }
+
+        .book button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #1a237e; /* dark blue button */
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .book button:hover {
+            background-color: #303f9f; /* slightly lighter dark blue hover */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a237e; /* dark blue */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+            nav a {
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">ProBookStore</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Categories</a>
+        <a href="#">Cart</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<div class="banner">
+    <div class="banner-box">
+        Discover Your Next Favorite Book 📖
+    </div>
+</div>
+
+<!-- Employer Link Button -->
+<div style="text-align:center; margin: 20px 0;">
+    <a href="https://your-portfolio-link.com" target="_blank" 
+       style="text-decoration:none; background-color:#1a237e; color:white; 
+              padding:12px 25px; border-radius:8px; font-size:16px; 
+              transition:background 0.3s;">
+        View My Project
+    </a>
+</div>
+
+<section class="about">
+    <h2>About Us</h2>
+    <p>Welcome to <b>ProBookStore</b>, your one-stop destination for books that inspire, educate, and entertain. We carefully curate our collection to bring you the most popular and timeless reads for every age and interest.</p>
+    <p>Our mission is to make reading accessible and enjoyable for everyone. We provide a seamless online shopping experience with easy browsing, secure checkout, and fast delivery.</p>
+</section>
+
+<section class="books">
+    <h2>Popular Books</h2>
+    <div class="book-list">
+        <div class="book">
+            <img src="alchemist.jpg" alt="The Alchemist">
+            <p><b>The Alchemist</b></p>
+            <p>RM 30</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="book">
+            <img src="Psychology.jpg" alt="The Psychology of Money">
+            <p><b>The Psychology Of Money</b></p>
+            <p>RM 35</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="book">
+            <img src="Poordad.jpg" alt="Rich Dad Poor Dad">
+            <p><b>Rich Dad Poor Dad</b></p>
+            <p>RM 28</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="book">
+            <img src="harrypotter.jpg" alt="Harry Potter">
+            <p><b>Harry Potter</b></p>
+            <p>RM 40</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2025 ProBookStore | Contact: info@probookstore.com
+</footer>
+
+</body>
+</html>
